@@ -1,13 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import './style.css';
 import './index.css';
-import App from './App';
+import ReactFlow, { ReactFlowProvider } from 'reactflow';
+import {DnDFlow} from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <ReactFlowProvider>
+      <DnDFlow />
+    </ReactFlowProvider>
   </React.StrictMode>
 );
 
